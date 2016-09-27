@@ -1,6 +1,6 @@
-ENV CRYSTAL_VERSION 0.19.2
-
 FROM heroku/cedar
+
+ENV CRYSTAL_VERSION 0.19.2
 
 RUN mkdir -p /app/user
 
