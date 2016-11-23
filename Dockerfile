@@ -1,6 +1,6 @@
 FROM heroku/cedar
 
-ENV VERSION 0.19.4
+ENV VERSION 0.20.0
 
 RUN mkdir -p /app/user
 
