@@ -10,7 +10,7 @@ RUN apt-get install -y --no-install-recommends sqlite3 libsqlite3-dev libpq-dev 
 
 RUN curl -L https://github.com/crystal-lang/crystal/releases/download/$CRYSTAL_VERSION/crystal-$CRYSTAL_VERSION-1-linux-x86_64.tar.gz | tar xvz -C /app/.
 
-ENV PATH /app/crystal-$CRYSTAL_VERSION-1/bin:$PATH
+RUN ln -s /app/crystal-$CRYSTAL_VERSION-1/bin/crystal /usr/local/bin/crystal
 
 ADD . /app/user
 WORKDIR /app/user
