@@ -4,7 +4,7 @@ ENV CRYSTAL_VERSION 0.23.0
 
 RUN apt-get update -qq
 
-RUN apt-get install -y --no-install-recommends build-essential curl ca-certificates git vim libyaml-0-2 libreadline-dev libxml2-dev 
+RUN apt-get install -y --no-install-recommends build-essential curl ca-certificates git vim netcat libyaml-0-2 libreadline-dev libxml2-dev 
 
 RUN apt-get install -y --no-install-recommends libsqlite3-dev libpq-dev libmysqlclient-dev
 
