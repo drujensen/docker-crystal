@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-ENV CRYSTAL_VERSION 0.23.0
+ENV CRYSTAL_VERSION 0.23.1
 
 RUN apt-get update -qq
 
