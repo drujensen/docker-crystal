@@ -8,9 +8,9 @@ RUN apt-get install -y --no-install-recommends build-essential curl ca-certifica
 
 RUN apt-get install -y --no-install-recommends libsqlite3-dev libpq-dev libmysqlclient-dev
 
-RUN curl -L https://github.com/crystal-lang/crystal/releases/download/$CRYSTAL_VERSION/crystal-$CRYSTAL_VERSION-1-linux-x86_64.tar.gz | tar xvz -C /usr/local/share/.
+RUN curl -L https://github.com/crystal-lang/crystal/releases/download/$CRYSTAL_VERSION/crystal-$CRYSTAL_VERSION-3-linux-x86_64.tar.gz | tar xvz -C /usr/local/share/.
 
-RUN ln -s /usr/local/share/crystal-$CRYSTAL_VERSION-1/bin/crystal /usr/local/bin/crystal
+RUN ln -s /usr/local/share/crystal-$CRYSTAL_VERSION-3/bin/crystal /usr/local/bin/crystal
 
 RUN mkdir -p /app/user
 WORKDIR /app/user
