@@ -8,11 +8,11 @@ RUN apt-get install -y --no-install-recommends libsqlite3-dev libpq-dev libmysql
 
 ENV CRYSTAL_VERSION 0.24.1
 
-ENV REVISION 2
+ENV CRYSTAL_REVISION 2
 
-RUN curl -L https://github.com/crystal-lang/crystal/releases/download/v$CRYSTAL_VERSION/crystal-$CRYSTAL_VERSION-$REVISION-linux-x86_64.tar.gz | tar xvz -C /usr/local/share/.
+RUN curl -L https://github.com/crystal-lang/crystal/releases/download/v$CRYSTAL_VERSION/crystal-$CRYSTAL_VERSION-$CRYSTAL_REVISION-linux-x86_64.tar.gz | tar xvz -C /opt/.
 
-RUN ln -s /usr/local/share/crystal-$CRYSTAL_VERSION-$REVISION/bin/crystal /usr/local/bin/crystal
+ENV PATH /opt/crystal-$CRYSTAL_VERSION/bin:$PATH
 
-RUN mkdir -p /app/user
-WORKDIR /app/user
+RUN mkdir -p /app
+WORKDIR /app
