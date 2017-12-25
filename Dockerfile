@@ -6,11 +6,11 @@ RUN apt-get install -y --no-install-recommends build-essential curl ca-certifica
 
 RUN apt-get install -y --no-install-recommends libsqlite3-dev libpq-dev libmysqlclient-dev
 
-ENV CRYSTAL_VERSION 0.24.0
+ENV CRYSTAL_VERSION 0.24.1
 
 ENV REVISION 2
 
-RUN curl -L https://github.com/crystal-lang/crystal/releases/download/$CRYSTAL_VERSION/crystal-$CRYSTAL_VERSION-$REVISION-linux-x86_64.tar.gz | tar xvz -C /usr/local/share/.
+RUN curl -L https://github.com/crystal-lang/crystal/releases/download/v$CRYSTAL_VERSION/crystal-$CRYSTAL_VERSION-$REVISION-linux-x86_64.tar.gz | tar xvz -C /usr/local/share/.
 
 RUN ln -s /usr/local/share/crystal-$CRYSTAL_VERSION-$REVISION/bin/crystal /usr/local/bin/crystal
 
